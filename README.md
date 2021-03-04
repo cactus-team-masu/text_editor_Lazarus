@@ -8,4 +8,4 @@
  
 GitHub проекта: https://github.com/cactus-team-masu/text_editor_Lazarus.git
 
-Завершенность проекта: 0%
+Завершенность проекта: 40%
