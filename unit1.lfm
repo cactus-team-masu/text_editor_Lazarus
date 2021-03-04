@@ -1,9 +1,17 @@
 object Form1: TForm1
+<<<<<<< Updated upstream
   Left = 733
   Height = 668
   Top = 251
   Width = 1046
   Caption = 'Text editor by Cactus Team!'
+=======
+  Left = 666
+  Height = 668
+  Top = 278
+  Width = 1046
+  Caption = 'Text editor by Cactus Team'
+>>>>>>> Stashed changes
   ClientHeight = 643
   ClientWidth = 1046
   DesignTimePPI = 120
