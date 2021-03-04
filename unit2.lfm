@@ -1,0 +1,27 @@
+object Form2: TForm2
+  Left = 984
+  Height = 240
+  Top = 294
+  Width = 320
+  Caption = 'About'
+  ClientHeight = 240
+  ClientWidth = 320
+  OnCreate = FormCreate
+  Position = poMainFormCenter
+  LCLVersion = '2.0.10.0'
+  object Label1: TLabel
+    Left = 56
+    Height = 180
+    Top = 24
+    Width = 203
+    Caption = 'Text Editor'#13#10#13#10'Текстовый редактор'#13#10#13#10'Версия: 1.0'#13#10'Создано Cactus Team'
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Color = clBlack
+    Font.Height = -21
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+end
