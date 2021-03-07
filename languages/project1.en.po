@@ -1,0 +1,150 @@
+msgid ""
+msgstr "Content-Type: text/plain; charset=UTF-8"
+
+#: tform1.caption
+msgid "Текстовый редактор"
+msgstr "Text Editor"
+
+#: tform1.menu_1_1_new.caption
+msgid "Новый"
+msgstr "New"
+
+#: tform1.menu_1_2_open.caption
+msgid "Открыть"
+msgstr "Open"
+
+#: tform1.menu_1_3_close.caption
+msgid "Закрыть"
+msgstr "Close"
+
+#: tform1.menu_1_4_save.caption
+msgid "Сохранить"
+msgstr "Save"
+
+#: tform1.menu_1_5_save_as.caption
+msgid "Сохранить как..."
+msgstr "Save As..."
+
+#: tform1.menu_1_6_exit.caption
+msgid "Выход"
+msgstr "Exit"
+
+#: tform1.menu_1_file.caption
+msgid "Файл"
+msgstr "File"
+
+#: tform1.menu_2_1_select_all.caption
+msgid "Выделить все"
+msgstr "Select All"
+
+#: tform1.menu_2_2_cut.caption
+msgid "Вырезать"
+msgstr "Cut"
+
+#: tform1.menu_2_3_copy.caption
+msgid "Копировать"
+msgstr "Copy"
+
+#: tform1.menu_2_4_paste.caption
+msgid "Вставить"
+msgstr "Paste"
+
+#: tform1.menu_2_edit.caption
+msgid "Правка"
+msgstr "Edit"
+
+#: tform1.menu_3_.caption
+msgid "Вид"
+msgstr "View"
+
+#: tform1.menu_3_1_font.caption
+msgid "Шрифт"
+msgstr "Font"
+
+#: tform1.menu_3_2_theme.caption
+msgid "Тема оформления"
+msgstr "Theme"
+
+#: tform1.menu_3_3_1_pas.caption
+msgid "Pascal"
+msgstr ""
+
+#: tform1.menu_3_3_2_cpp.caption
+msgid "C++"
+msgstr ""
+
+#: tform1.menu_3_3_3_py.caption
+msgid "Python"
+msgstr ""
+
+#: tform1.menu_3_3_4_none.caption
+msgid "Обычный текст"
+msgstr "Text"
+
+#: tform1.menu_3_3_synedit.caption
+msgid "Синтаксис"
+msgstr "Syntax"
+
+#: tform1.menu_3_4_1_ru.caption
+msgid "Русский"
+msgstr ""
+
+#: tform1.menu_3_4_lang.caption
+msgid "Язык"
+msgstr "Language"
+
+#: tform1.menu_4_1_find.caption
+msgid "Найти..."
+msgstr "Find..."
+
+#: tform1.menu_4_2_replace.caption
+msgid "Заменить..."
+msgstr "Replace..."
+
+#: tform1.menu_4_search.caption
+msgid "Поиск"
+msgstr "Search"
+
+#: tform1.menu_5_1_help.caption
+msgctxt "tform1.menu_5_1_help.caption"
+msgid "Справка"
+msgstr "Help"
+
+#: tform1.menu_5_2_about.caption
+msgctxt "tform1.menu_5_2_about.caption"
+msgid "О программе"
+msgstr "About"
+
+#: tform1.menu_5_help.caption
+msgctxt "tform1.menu_5_help.caption"
+msgid "Справка"
+msgstr "Help"
+
+#: tform1.menu_lang_3_4_2_en.caption
+msgid "English"
+msgstr ""
+
+#: tform2.caption
+msgctxt "tform2.caption"
+msgid "О программе"
+msgstr "About"
+
+#: tform2.label1.caption
+msgid ""
+"Text Editor\n"
+"\n"
+"Текстовый редактор\n"
+"\n"
+"Версия: 1.0\n"
+"Создано Cactus Team\n"
+msgstr "Created by Cactus Team\n"
+
+#: tform3.caption
+msgctxt "tform3.caption"
+msgid "Справка"
+msgstr "Help"
+
+#: tform3.label1.caption
+msgid "Тут надо что-то написать"
+msgstr "Hello!!!"
+
