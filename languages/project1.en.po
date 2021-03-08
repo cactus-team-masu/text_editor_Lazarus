@@ -94,11 +94,15 @@ msgid "Язык"
 msgstr "Language"
 
 #: tform1.menu_4_1_find.caption
-msgid "Найти..."
+#, fuzzy
+#| msgid "Найти..."
+msgid "Найти"
 msgstr "Find..."
 
 #: tform1.menu_4_2_replace.caption
-msgid "Заменить..."
+#, fuzzy
+#| msgid "Заменить..."
+msgid "Заменить"
 msgstr "Replace..."
 
 #: tform1.menu_4_search.caption
@@ -137,7 +141,7 @@ msgid ""
 "\n"
 "Версия: 1.0\n"
 "Создано Cactus Team\n"
-msgstr "Created by Cactus Team\n"
+msgstr "Created by Cactus Team"
 
 #: tform3.caption
 msgctxt "tform3.caption"
