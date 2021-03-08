@@ -7,7 +7,7 @@ interface
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, Menus, StdCtrls,
   ComCtrls, ExtCtrls, SynEdit, SynHighlighterPas, SynHighlighterCpp,
-  SynHighlighterPython, SynHighlighterAny;
+  SynHighlighterPython, SynHighlighterAny, LCLTranslator;
 
 type
 
@@ -15,6 +15,9 @@ type
 
   TForm1 = class(TForm)
     MainMenu1: TMainMenu;
+    Menu_3_4_1_ru: TMenuItem;
+    Menu_lang_3_4_2_en: TMenuItem;
+    Menu_3_4_Lang: TMenuItem;
     Menu_3_3_4_none: TMenuItem;
     Menu_3_3_3_py: TMenuItem;
     Menu_3_3_2_cpp: TMenuItem;
@@ -61,13 +64,18 @@ type
     procedure Menu_2_2_cutClick(Sender: TObject);
     procedure Menu_2_3_copyClick(Sender: TObject);
     procedure Menu_2_4_pasteClick(Sender: TObject);
+    procedure Menu_3_1_fontClick(Sender: TObject);
     procedure Menu_3_3_1_pasClick(Sender: TObject);
     procedure Menu_3_3_2_cppClick(Sender: TObject);
     procedure Menu_3_3_3_pyClick(Sender: TObject);
     procedure Menu_3_3_4_noneClick(Sender: TObject);
+    procedure Menu_3_4_1_ruClick(Sender: TObject);
+    procedure Menu_3_4_LangClick(Sender: TObject);
     procedure Menu_4_1_findClick(Sender: TObject);
+    procedure Menu_4_searchClick(Sender: TObject);
     procedure Menu_5_1_helpClick(Sender: TObject);
     procedure Menu_5_2_aboutClick(Sender: TObject);
+    procedure Menu_lang_3_4_2_enClick(Sender: TObject);
     procedure SynEdit1Change(Sender: TObject);
     procedure Timer1Timer(Sender: TObject);
   private
@@ -157,6 +165,11 @@ begin
  SynEdit1.PasteFromClipboard;
 end;
 
+procedure TForm1.Menu_3_1_fontClick(Sender: TObject);
+begin
+
+end;
+
 procedure TForm1.Menu_3_3_1_pasClick(Sender: TObject);
 begin
  SynEdit1.Highlighter := SynPasSyn1;
@@ -177,7 +190,22 @@ begin
   SynEdit1.Highlighter := SynAnySyn1;
 end;
 
+procedure TForm1.Menu_3_4_1_ruClick(Sender: TObject);
+begin
+ SetDefaultLang('ru','languages');
+end;
+
+procedure TForm1.Menu_3_4_LangClick(Sender: TObject);
+begin
+
+end;
+
 procedure TForm1.Menu_4_1_findClick(Sender: TObject);
+begin
+
+end;
+
+procedure TForm1.Menu_4_searchClick(Sender: TObject);
 begin
 
 end;
@@ -190,6 +218,11 @@ end;
 procedure TForm1.Menu_5_2_aboutClick(Sender: TObject);
 begin
  Unit2.Form2.Show;
+end;
+
+procedure TForm1.Menu_lang_3_4_2_enClick(Sender: TObject);
+begin
+ SetDefaultLang('en','languages');
 end;
 
 procedure TForm1.SynEdit1Change(Sender: TObject);

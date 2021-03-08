@@ -1,46 +1,48 @@
 object Form1: TForm1
-  Left = 1036
-  Height = 534
-  Top = 213
-  Width = 837
-  Caption = 'Text editor by Cactus Team'
-  ClientHeight = 514
-  ClientWidth = 837
+  Left = 770
+  Height = 772
+  Top = 217
+  Width = 1046
+  Caption = 'Текстовый редактор'
+  ClientHeight = 747
+  ClientWidth = 1046
+  DesignTimePPI = 120
   Menu = MainMenu1
   OnCreate = FormCreate
   Position = poDesktopCenter
-  LCLVersion = '2.0.10.0'
+  LCLVersion = '2.0.8.0'
   object StatusBar1: TStatusBar
     Left = 0
-    Height = 23
-    Top = 491
-    Width = 837
+    Height = 29
+    Top = 718
+    Width = 1046
     Panels = <    
       item
-        Width = 200
+        Width = 250
       end    
       item
-        Width = 500
+        Width = 625
       end    
       item
-        Width = 50
+        Width = 62
       end>
+    ParentFont = False
     SimplePanel = False
   end
   inline SynEdit1: TSynEdit
     Left = 0
-    Height = 491
+    Height = 718
     Top = 0
-    Width = 837
+    Width = 1046
     Align = alClient
-    Font.Height = -13
+    Font.Height = -16
     Font.Name = 'Courier New'
     Font.Pitch = fpFixed
     Font.Quality = fqNonAntialiased
     ParentColor = False
     ParentFont = False
     TabOrder = 1
-    Gutter.Width = 57
+    Gutter.Width = 72
     Gutter.MouseActions = <>
     RightGutter.Width = 0
     RightGutter.MouseActions = <>
@@ -490,11 +492,11 @@ object Form1: TForm1
     OnChange = SynEdit1Change
     inline SynLeftGutterPartList1: TSynGutterPartList
       object SynGutterMarks1: TSynGutterMarks
-        Width = 24
+        Width = 30
         MouseActions = <>
       end
       object SynGutterLineNumber1: TSynGutterLineNumber
-        Width = 17
+        Width = 21
         MouseActions = <>
         MarkupInfo.Background = clBtnFace
         MarkupInfo.Foreground = clNone
@@ -504,18 +506,19 @@ object Form1: TForm1
         LeadingZeros = False
       end
       object SynGutterChanges1: TSynGutterChanges
-        Width = 4
+        Width = 5
         MouseActions = <>
         ModifiedColor = 59900
         SavedColor = clGreen
       end
       object SynGutterSeparator1: TSynGutterSeparator
-        Width = 2
+        Width = 3
         MouseActions = <>
         MarkupInfo.Background = clWhite
         MarkupInfo.Foreground = clGray
       end
       object SynGutterCodeFolding1: TSynGutterCodeFolding
+        Width = 13
         MouseActions = <>
         MarkupInfo.Background = clNone
         MarkupInfo.Foreground = clGray
@@ -525,100 +528,113 @@ object Form1: TForm1
     end
   end
   object MainMenu1: TMainMenu
-    Left = 753
-    Top = 8
+    left = 941
+    top = 10
     object Menu_1_file: TMenuItem
-      Caption = 'Menu_1_file'
+      Caption = 'Файл'
       object Menu_1_1_new: TMenuItem
-        Caption = 'Menu_1_1_new'
+        Caption = 'Новый'
         OnClick = Menu_1_1_newClick
       end
       object Menu_1_2_open: TMenuItem
-        Caption = 'Menu_1_2_open'
+        Caption = 'Открыть'
         OnClick = Menu_1_2_openClick
       end
       object Menu_1_3_close: TMenuItem
-        Caption = 'Menu_1_3_close'
+        Caption = 'Закрыть'
         OnClick = Menu_1_3_closeClick
       end
       object Menu_1_4_save: TMenuItem
-        Caption = 'Menu_1_4_save'
+        Caption = 'Сохранить'
         OnClick = Menu_1_4_saveClick
       end
       object Menu_1_5_save_as: TMenuItem
-        Caption = 'Menu_1_5_save_as'
+        Caption = 'Сохранить как...'
         OnClick = Menu_1_5_save_asClick
       end
       object Menu_1_6_exit: TMenuItem
-        Caption = 'Menu_1_6_exit'
+        Caption = 'Выход'
         OnClick = Menu_1_6_exitClick
       end
     end
     object Menu_2_edit: TMenuItem
-      Caption = 'Menu_2_edit'
+      Caption = 'Правка'
       object Menu_2_1_select_all: TMenuItem
-        Caption = 'Menu_2_1_select_all'
+        Caption = 'Выделить все'
         OnClick = Menu_2_1_select_allClick
       end
       object Menu_2_2_cut: TMenuItem
-        Caption = 'Menu_2_2_cut'
+        Caption = 'Вырезать'
         OnClick = Menu_2_2_cutClick
       end
       object Menu_2_3_copy: TMenuItem
-        Caption = 'Menu_2_3_copy'
+        Caption = 'Копировать'
         OnClick = Menu_2_3_copyClick
       end
       object Menu_2_4_paste: TMenuItem
-        Caption = 'Menu_2_4_paste'
+        Caption = 'Вставить'
         OnClick = Menu_2_4_pasteClick
       end
     end
     object Menu_3_: TMenuItem
-      Caption = 'Menu_3_'
+      Caption = 'Вид'
       object Menu_3_1_font: TMenuItem
-        Caption = 'Menu_3_1_font'
+        Caption = 'Шрифт'
+        OnClick = Menu_3_1_fontClick
       end
       object Menu_3_2_theme: TMenuItem
-        Caption = 'Menu_3_2_theme'
+        Caption = 'Тема оформления'
       end
       object Menu_3_3_synEdit: TMenuItem
-        Caption = 'Menu_3_3_synEdit'
+        Caption = 'Синтаксис'
         object Menu_3_3_1_pas: TMenuItem
-          Caption = 'Menu_3_3_1_pas'
+          Caption = 'Pascal'
           OnClick = Menu_3_3_1_pasClick
         end
         object Menu_3_3_2_cpp: TMenuItem
-          Caption = 'Menu_3_3_2_cpp'
+          Caption = 'C++'
           OnClick = Menu_3_3_2_cppClick
         end
         object Menu_3_3_3_py: TMenuItem
-          Caption = 'Menu_3_3_3_py'
+          Caption = 'Python'
           OnClick = Menu_3_3_3_pyClick
         end
         object Menu_3_3_4_none: TMenuItem
-          Caption = 'Menu_3_3_4_none'
+          Caption = 'Обычный текст'
           OnClick = Menu_3_3_4_noneClick
+        end
+      end
+      object Menu_3_4_Lang: TMenuItem
+        Caption = 'Язык'
+        object Menu_3_4_1_ru: TMenuItem
+          Caption = 'Русский'
+          OnClick = Menu_3_4_1_ruClick
+        end
+        object Menu_lang_3_4_2_en: TMenuItem
+          Caption = 'English'
+          OnClick = Menu_lang_3_4_2_enClick
         end
       end
     end
     object Menu_4_search: TMenuItem
-      Caption = 'Menu_4_search'
+      Caption = 'Поиск'
+      OnClick = Menu_4_searchClick
       object Menu_4_1_find: TMenuItem
-        Caption = 'Menu_4_1_find'
+        Caption = 'Найти'
         OnClick = Menu_4_1_findClick
       end
       object Menu_4_2_replace: TMenuItem
-        Caption = 'Menu_4_2_replace'
+        Caption = 'Заменить'
       end
     end
     object Menu_5_help: TMenuItem
-      Caption = 'Menu_5_help'
+      Caption = 'Справка'
       object Menu_5_1_help: TMenuItem
-        Caption = 'Menu_5_1_help'
+        Caption = 'Справка'
         OnClick = Menu_5_1_helpClick
       end
       object Menu_5_2_about: TMenuItem
-        Caption = 'Menu_5_2_about'
+        Caption = 'О программе'
         OnClick = Menu_5_2_aboutClick
       end
     end
@@ -626,38 +642,38 @@ object Form1: TForm1
   object SaveDialog1: TSaveDialog
     DefaultExt = '.txt'
     Filter = 'Text File (*.txt)|*.txt|Все файлы|*.*'
-    Left = 752
-    Top = 56
+    left = 940
+    top = 70
   end
   object OpenDialog1: TOpenDialog
     DefaultExt = '.txt'
     Filter = 'Text File (*.txt)|*.txt|Все файлы|*.*'
-    Left = 680
-    Top = 56
+    left = 850
+    top = 70
   end
   object Timer1: TTimer
     OnTimer = Timer1Timer
-    Left = 752
-    Top = 128
+    left = 940
+    top = 160
   end
   object SynPasSyn1: TSynPasSyn
     Enabled = False
     CompilerMode = pcmDelphi
     NestedComments = False
-    Left = 753
-    Top = 216
+    left = 941
+    top = 270
   end
   object SynCppSyn1: TSynCppSyn
     DefaultFilter = 'Файлы C++ (*.c,*.cpp,*.h,*.hpp,*.hh)|*.c;*.cpp;*.h;*.hpp;*.hh'
     Enabled = False
-    Left = 752
-    Top = 272
+    left = 940
+    top = 340
   end
   object SynPythonSyn1: TSynPythonSyn
     DefaultFilter = 'Файлы Python (*.py)|*.py'
     Enabled = False
-    Left = 752
-    Top = 328
+    left = 940
+    top = 410
   end
   object SynAnySyn1: TSynAnySyn
     Enabled = False
@@ -668,7 +684,7 @@ object Form1: TForm1
     Entity = False
     DollarVariables = False
     ActiveDot = False
-    Left = 752
-    Top = 392
+    left = 940
+    top = 490
   end
 end
