@@ -72,6 +72,7 @@ type
     procedure Menu_3_4_1_ruClick(Sender: TObject);
     procedure Menu_3_4_LangClick(Sender: TObject);
     procedure Menu_4_1_findClick(Sender: TObject);
+    procedure Menu_4_2_replaceClick(Sender: TObject);
     procedure Menu_4_searchClick(Sender: TObject);
     procedure Menu_5_1_helpClick(Sender: TObject);
     procedure Menu_5_2_aboutClick(Sender: TObject);
@@ -89,7 +90,7 @@ var
   CurrentFile: String;
 
 implementation
-uses Unit2,Unit3;
+uses Unit2,Unit3,Unit4, Unit5;
 {$R *.lfm}
 
 { TForm1 }
@@ -202,7 +203,12 @@ end;
 
 procedure TForm1.Menu_4_1_findClick(Sender: TObject);
 begin
+   Unit5.Form5.Show;
+end;
 
+procedure TForm1.Menu_4_2_replaceClick(Sender: TObject);
+begin
+  Unit4.Form4.Show;
 end;
 
 procedure TForm1.Menu_4_searchClick(Sender: TObject);

@@ -1,10 +1,10 @@
 object Form1: TForm1
-  Left = 770
-  Height = 772
-  Top = 217
+  Left = 590
+  Height = 687
+  Top = 203
   Width = 1046
   Caption = 'Текстовый редактор'
-  ClientHeight = 747
+  ClientHeight = 662
   ClientWidth = 1046
   DesignTimePPI = 120
   Menu = MainMenu1
@@ -14,7 +14,7 @@ object Form1: TForm1
   object StatusBar1: TStatusBar
     Left = 0
     Height = 29
-    Top = 718
+    Top = 633
     Width = 1046
     Panels = <    
       item
@@ -31,7 +31,7 @@ object Form1: TForm1
   end
   inline SynEdit1: TSynEdit
     Left = 0
-    Height = 718
+    Height = 633
     Top = 0
     Width = 1046
     Align = alClient
@@ -620,11 +620,12 @@ object Form1: TForm1
       Caption = 'Поиск'
       OnClick = Menu_4_searchClick
       object Menu_4_1_find: TMenuItem
-        Caption = 'Найти'
+        Caption = 'Найти...'
         OnClick = Menu_4_1_findClick
       end
       object Menu_4_2_replace: TMenuItem
-        Caption = 'Заменить'
+        Caption = 'Заменить...'
+        OnClick = Menu_4_2_replaceClick
       end
     end
     object Menu_5_help: TMenuItem
@@ -640,10 +641,11 @@ object Form1: TForm1
     end
   end
   object SaveDialog1: TSaveDialog
+    Title = 'Сохранить как'
     DefaultExt = '.txt'
     Filter = 'Text File (*.txt)|*.txt|Все файлы|*.*'
     left = 940
-    top = 70
+    top = 72
   end
   object OpenDialog1: TOpenDialog
     DefaultExt = '.txt'
