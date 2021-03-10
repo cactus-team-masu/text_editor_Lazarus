@@ -22,6 +22,7 @@ type
     Label2: TLabel;
     procedure CancelClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure Label1Click(Sender: TObject);
     procedure RegisterChange(Sender: TObject);
     procedure ReplaceClick(Sender: TObject);
     procedure Replace_AllClick(Sender: TObject);
@@ -83,6 +84,11 @@ begin
 end;
 
 procedure TForm4.FormCreate(Sender: TObject);
+begin
+
+end;
+
+procedure TForm4.Label1Click(Sender: TObject);
 begin
 
 end;

@@ -164,11 +164,11 @@ msgstr "Replace"
 
 #: tform4.label1.caption
 msgctxt "tform4.label1.caption"
-msgid "Что:"
+msgid "Найти текст:"
 msgstr "Find What:"
 
 #: tform4.label2.caption
-msgid "Чем:"
+msgid "Заменить на:"
 msgstr "Replace With:"
 
 #: tform4.register.caption
@@ -202,7 +202,7 @@ msgstr "Find Next"
 
 #: tform5.label1.caption
 msgctxt "tform5.label1.caption"
-msgid "Что:"
+msgid "Найти текст:"
 msgstr "Find what:"
 
 #: tform5.register.caption
