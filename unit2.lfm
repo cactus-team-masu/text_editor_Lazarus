@@ -1,9 +1,17 @@
 object Form2: TForm2
+<<<<<<< Updated upstream
   Left = 1106
   Height = 240
   Top = 156
   Width = 320
   Caption = 'About Program'
+=======
+  Left = 1394
+  Height = 240
+  Top = 349
+  Width = 320
+  Caption = 'О программе'
+>>>>>>> Stashed changes
   ClientHeight = 240
   ClientWidth = 320
   OnCreate = FormCreate

@@ -1,4 +1,5 @@
 object Form1: TForm1
+<<<<<<< Updated upstream
   Left = 1013
   Height = 534
   Top = 282
@@ -6,13 +7,23 @@ object Form1: TForm1
   Caption = 'Text editor by Cactus Team'
   ClientHeight = 0
   ClientWidth = 0
+=======
+  Left = 361
+  Height = 589
+  Top = 145
+  Width = 1440
+  Caption = 'Текстовый редактор'
+  ClientHeight = 569
+  ClientWidth = 1440
+  Color = clHighlight
+>>>>>>> Stashed changes
   Menu = MainMenu1
-  OnCreate = FormCreate
   Position = poDesktopCenter
   LCLVersion = '2.0.10.0'
   object StatusBar1: TStatusBar
     Left = 0
     Height = 23
+<<<<<<< Updated upstream
     Top = 491
     Width = 837
     Panels = <    
@@ -25,14 +36,44 @@ object Form1: TForm1
       item
         Width = 50
       end>
+=======
+    Top = 546
+    Width = 1440
+    Color = clBlack
+    Panels = <    
+      item
+        Style = psOwnerDraw
+        Width = 200
+      end    
+      item
+        Style = psOwnerDraw
+        Width = 500
+      end    
+      item
+        Alignment = taCenter
+        Style = psOwnerDraw
+        Width = 50
+      end>
+    ParentColor = False
+    ParentFont = False
+>>>>>>> Stashed changes
     SimplePanel = False
+    OnDrawPanel = StatusBar1DrawPanel
   end
   inline SynEdit1: TSynEdit
     Left = 0
+<<<<<<< Updated upstream
     Height = 491
     Top = 0
     Width = 837
     Align = alClient
+=======
+    Height = 546
+    Top = 0
+    Width = 1440
+    Align = alClient
+    Font.Color = clHighlight
+>>>>>>> Stashed changes
     Font.Height = -13
     Font.Name = 'Courier New'
     Font.Pitch = fpFixed
@@ -42,6 +83,7 @@ object Form1: TForm1
     TabOrder = 1
     Gutter.Width = 57
     Gutter.MouseActions = <>
+    RightGutter.Color = clNone
     RightGutter.Width = 0
     RightGutter.MouseActions = <>
     Keystrokes = <    
@@ -469,6 +511,9 @@ object Form1: TForm1
     MouseTextActions = <>
     MouseSelActions = <>
     VisibleSpecialChars = [vscSpace, vscTabAtLast]
+    RightEdgeColor = clMedGray
+    SelectedColor.Background = clLime
+    SelectedColor.Foreground = cl3DDkShadow
     SelectedColor.BackPriority = 50
     SelectedColor.ForePriority = 50
     SelectedColor.FramePriority = 50
@@ -476,11 +521,14 @@ object Form1: TForm1
     SelectedColor.ItalicPriority = 50
     SelectedColor.UnderlinePriority = 50
     SelectedColor.StrikeOutPriority = 50
+    IncrementColor.Background = clWindow
+    IncrementColor.Foreground = clNone
+    HighlightAllColor.Background = clSkyBlue
     BracketHighlightStyle = sbhsBoth
     BracketMatchColor.Background = clNone
     BracketMatchColor.Foreground = clNone
     BracketMatchColor.Style = [fsBold]
-    FoldedCodeColor.Background = clNone
+    FoldedCodeColor.Background = clWindowText
     FoldedCodeColor.Foreground = clGray
     FoldedCodeColor.FrameColor = clGray
     MouseLinkColor.Background = clNone
@@ -506,14 +554,14 @@ object Form1: TForm1
       object SynGutterChanges1: TSynGutterChanges
         Width = 4
         MouseActions = <>
-        ModifiedColor = 59900
-        SavedColor = clGreen
+        ModifiedColor = clLime
+        SavedColor = clMedGray
       end
       object SynGutterSeparator1: TSynGutterSeparator
         Width = 2
         MouseActions = <>
         MarkupInfo.Background = clWhite
-        MarkupInfo.Foreground = clGray
+        MarkupInfo.Foreground = clWhite
       end
       object SynGutterCodeFolding1: TSynGutterCodeFolding
         MouseActions = <>
@@ -525,7 +573,11 @@ object Form1: TForm1
     end
   end
   object MainMenu1: TMainMenu
+<<<<<<< Updated upstream
     Left = 753
+=======
+    Left = 784
+>>>>>>> Stashed changes
     Top = 8
     object Menu_1_file: TMenuItem
       Caption = 'Menu_1_file'
@@ -579,7 +631,24 @@ object Form1: TForm1
         Caption = 'Menu_3_1_font'
       end
       object Menu_3_2_theme: TMenuItem
+<<<<<<< Updated upstream
         Caption = 'Menu_3_2_theme'
+=======
+        Caption = 'Тема оформления'
+        OnClick = Menu_3_2_themeClick
+        object MenuItem1: TMenuItem
+          Caption = 'Светлая'
+          OnClick = MenuItem1Click
+        end
+        object MenuItem2: TMenuItem
+          Caption = 'Темная'
+          OnClick = MenuItem2Click
+        end
+        object MenuItem3: TMenuItem
+          Caption = 'Цветная'
+          OnClick = MenuItem3Click
+        end
+>>>>>>> Stashed changes
       end
       object Menu_3_3_synEdit: TMenuItem
         Caption = 'Menu_3_3_synEdit'
@@ -626,37 +695,63 @@ object Form1: TForm1
   object SaveDialog1: TSaveDialog
     DefaultExt = '.txt'
     Filter = 'Text File (*.txt)|*.txt|Все файлы|*.*'
+<<<<<<< Updated upstream
     Left = 752
+=======
+    Left = 784
+>>>>>>> Stashed changes
     Top = 56
   end
   object OpenDialog1: TOpenDialog
     DefaultExt = '.txt'
     Filter = 'Text File (*.txt)|*.txt|Все файлы|*.*'
+<<<<<<< Updated upstream
     Left = 680
+=======
+    Left = 728
+>>>>>>> Stashed changes
     Top = 56
   end
   object Timer1: TTimer
     OnTimer = Timer1Timer
+<<<<<<< Updated upstream
     Left = 752
+=======
+    Left = 784
+>>>>>>> Stashed changes
     Top = 128
   end
   object SynPasSyn1: TSynPasSyn
     Enabled = False
     CompilerMode = pcmDelphi
     NestedComments = False
+<<<<<<< Updated upstream
     Left = 753
     Top = 216
+=======
+    Left = 784
+    Top = 192
+>>>>>>> Stashed changes
   end
   object SynCppSyn1: TSynCppSyn
     DefaultFilter = 'Файлы C++ (*.c,*.cpp,*.h,*.hpp,*.hh)|*.c;*.cpp;*.h;*.hpp;*.hh'
     Enabled = False
+<<<<<<< Updated upstream
     Left = 752
     Top = 272
+=======
+    Left = 784
+    Top = 264
+>>>>>>> Stashed changes
   end
   object SynPythonSyn1: TSynPythonSyn
     DefaultFilter = 'Файлы Python (*.py)|*.py'
     Enabled = False
+<<<<<<< Updated upstream
     Left = 752
+=======
+    Left = 784
+>>>>>>> Stashed changes
     Top = 328
   end
   object SynAnySyn1: TSynAnySyn
@@ -668,7 +763,18 @@ object Form1: TForm1
     Entity = False
     DollarVariables = False
     ActiveDot = False
+<<<<<<< Updated upstream
     Left = 752
     Top = 392
+=======
+    Left = 784
+    Top = 400
+  end
+  object FontDialog1: TFontDialog
+    MinFontSize = 0
+    MaxFontSize = 0
+    Left = 872
+    Top = 8
+>>>>>>> Stashed changes
   end
 end
