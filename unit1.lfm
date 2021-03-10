@@ -1,10 +1,10 @@
 object Form1: TForm1
-  Left = 1036
-  Height = 534
-  Top = 213
+  Left = 590
+  Height = 550
+  Top = 203
   Width = 837
-  Caption = 'Text editor by Cactus Team'
-  ClientHeight = 514
+  Caption = 'Текстовый редактор'
+  ClientHeight = 530
   ClientWidth = 837
   Menu = MainMenu1
   OnCreate = FormCreate
@@ -13,7 +13,7 @@ object Form1: TForm1
   object StatusBar1: TStatusBar
     Left = 0
     Height = 23
-    Top = 491
+    Top = 507
     Width = 837
     Panels = <    
       item
@@ -25,11 +25,12 @@ object Form1: TForm1
       item
         Width = 50
       end>
+    ParentFont = False
     SimplePanel = False
   end
   inline SynEdit1: TSynEdit
     Left = 0
-    Height = 491
+    Height = 507
     Top = 0
     Width = 837
     Align = alClient
@@ -40,6 +41,7 @@ object Form1: TForm1
     ParentColor = False
     ParentFont = False
     TabOrder = 1
+    OnClick = SynEdit1Change
     Gutter.Width = 57
     Gutter.MouseActions = <>
     RightGutter.Width = 0
@@ -528,106 +530,121 @@ object Form1: TForm1
     Left = 753
     Top = 8
     object Menu_1_file: TMenuItem
-      Caption = 'Menu_1_file'
+      Caption = 'Файл'
       object Menu_1_1_new: TMenuItem
-        Caption = 'Menu_1_1_new'
+        Caption = 'Новый'
         OnClick = Menu_1_1_newClick
       end
       object Menu_1_2_open: TMenuItem
-        Caption = 'Menu_1_2_open'
+        Caption = 'Открыть'
         OnClick = Menu_1_2_openClick
       end
       object Menu_1_3_close: TMenuItem
-        Caption = 'Menu_1_3_close'
+        Caption = 'Закрыть'
         OnClick = Menu_1_3_closeClick
       end
       object Menu_1_4_save: TMenuItem
-        Caption = 'Menu_1_4_save'
+        Caption = 'Сохранить'
         OnClick = Menu_1_4_saveClick
       end
       object Menu_1_5_save_as: TMenuItem
-        Caption = 'Menu_1_5_save_as'
+        Caption = 'Сохранить как...'
         OnClick = Menu_1_5_save_asClick
       end
       object Menu_1_6_exit: TMenuItem
-        Caption = 'Menu_1_6_exit'
+        Caption = 'Выход'
         OnClick = Menu_1_6_exitClick
       end
     end
     object Menu_2_edit: TMenuItem
-      Caption = 'Menu_2_edit'
+      Caption = 'Правка'
       object Menu_2_1_select_all: TMenuItem
-        Caption = 'Menu_2_1_select_all'
+        Caption = 'Выделить все'
         OnClick = Menu_2_1_select_allClick
       end
       object Menu_2_2_cut: TMenuItem
-        Caption = 'Menu_2_2_cut'
+        Caption = 'Вырезать'
         OnClick = Menu_2_2_cutClick
       end
       object Menu_2_3_copy: TMenuItem
-        Caption = 'Menu_2_3_copy'
+        Caption = 'Копировать'
         OnClick = Menu_2_3_copyClick
       end
       object Menu_2_4_paste: TMenuItem
-        Caption = 'Menu_2_4_paste'
+        Caption = 'Вставить'
         OnClick = Menu_2_4_pasteClick
       end
     end
     object Menu_3_: TMenuItem
-      Caption = 'Menu_3_'
+      Caption = 'Вид'
       object Menu_3_1_font: TMenuItem
-        Caption = 'Menu_3_1_font'
+        Caption = 'Шрифт'
+        OnClick = Menu_3_1_fontClick
       end
       object Menu_3_2_theme: TMenuItem
-        Caption = 'Menu_3_2_theme'
+        Caption = 'Тема оформления'
       end
       object Menu_3_3_synEdit: TMenuItem
-        Caption = 'Menu_3_3_synEdit'
+        Caption = 'Синтаксис'
         object Menu_3_3_1_pas: TMenuItem
-          Caption = 'Menu_3_3_1_pas'
+          Caption = 'Pascal'
           OnClick = Menu_3_3_1_pasClick
         end
         object Menu_3_3_2_cpp: TMenuItem
-          Caption = 'Menu_3_3_2_cpp'
+          Caption = 'C++'
           OnClick = Menu_3_3_2_cppClick
         end
         object Menu_3_3_3_py: TMenuItem
-          Caption = 'Menu_3_3_3_py'
+          Caption = 'Python'
           OnClick = Menu_3_3_3_pyClick
         end
         object Menu_3_3_4_none: TMenuItem
-          Caption = 'Menu_3_3_4_none'
+          Caption = 'Обычный текст'
           OnClick = Menu_3_3_4_noneClick
+        end
+      end
+      object Menu_3_4_Lang: TMenuItem
+        Caption = 'Язык'
+        object Menu_3_4_1_ru: TMenuItem
+          Caption = 'Русский'
+          OnClick = Menu_3_4_1_ruClick
+        end
+        object Menu_lang_3_4_2_en: TMenuItem
+          Caption = 'English'
+          OnClick = Menu_lang_3_4_2_enClick
         end
       end
     end
     object Menu_4_search: TMenuItem
-      Caption = 'Menu_4_search'
+      Caption = 'Поиск'
+      OnClick = Menu_4_searchClick
       object Menu_4_1_find: TMenuItem
-        Caption = 'Menu_4_1_find'
+        Caption = 'Найти...'
         OnClick = Menu_4_1_findClick
       end
       object Menu_4_2_replace: TMenuItem
-        Caption = 'Menu_4_2_replace'
+        Caption = 'Заменить...'
+        OnClick = Menu_4_2_replaceClick
       end
     end
     object Menu_5_help: TMenuItem
-      Caption = 'Menu_5_help'
+      Caption = 'Справка'
       object Menu_5_1_help: TMenuItem
-        Caption = 'Menu_5_1_help'
+        Caption = 'Справка'
         OnClick = Menu_5_1_helpClick
       end
       object Menu_5_2_about: TMenuItem
-        Caption = 'Menu_5_2_about'
+        Caption = 'О программе'
         OnClick = Menu_5_2_aboutClick
       end
     end
   end
   object SaveDialog1: TSaveDialog
+    Title = 'Сохранить как'
     DefaultExt = '.txt'
     Filter = 'Text File (*.txt)|*.txt|Все файлы|*.*'
     Left = 752
-    Top = 56
+    Top = 58
   end
   object OpenDialog1: TOpenDialog
     DefaultExt = '.txt'
