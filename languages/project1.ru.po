@@ -1,0 +1,213 @@
+msgid ""
+msgstr "Content-Type: text/plain; charset=UTF-8"
+
+#: tform1.caption
+msgid "Текстовый редактор"
+msgstr ""
+
+#: tform1.menu_1_1_new.caption
+msgid "Новый"
+msgstr ""
+
+#: tform1.menu_1_2_open.caption
+msgid "Открыть"
+msgstr ""
+
+#: tform1.menu_1_3_close.caption
+msgid "Закрыть"
+msgstr ""
+
+#: tform1.menu_1_4_save.caption
+msgid "Сохранить"
+msgstr ""
+
+#: tform1.menu_1_5_save_as.caption
+msgid "Сохранить как..."
+msgstr ""
+
+#: tform1.menu_1_6_exit.caption
+msgid "Выход"
+msgstr ""
+
+#: tform1.menu_1_file.caption
+msgid "Файл"
+msgstr ""
+
+#: tform1.menu_2_1_select_all.caption
+msgid "Выделить все"
+msgstr ""
+
+#: tform1.menu_2_2_cut.caption
+msgid "Вырезать"
+msgstr ""
+
+#: tform1.menu_2_3_copy.caption
+msgid "Копировать"
+msgstr ""
+
+#: tform1.menu_2_4_paste.caption
+msgid "Вставить"
+msgstr ""
+
+#: tform1.menu_2_edit.caption
+msgid "Правка"
+msgstr ""
+
+#: tform1.menu_3_.caption
+msgid "Вид"
+msgstr ""
+
+#: tform1.menu_3_1_font.caption
+msgid "Шрифт"
+msgstr ""
+
+#: tform1.menu_3_2_theme.caption
+msgid "Тема оформления"
+msgstr ""
+
+#: tform1.menu_3_3_1_pas.caption
+msgid "Pascal"
+msgstr ""
+
+#: tform1.menu_3_3_2_cpp.caption
+msgid "C++"
+msgstr ""
+
+#: tform1.menu_3_3_3_py.caption
+msgid "Python"
+msgstr ""
+
+#: tform1.menu_3_3_4_none.caption
+msgid "Обычный текст"
+msgstr ""
+
+#: tform1.menu_3_3_synedit.caption
+msgid "Синтаксис"
+msgstr ""
+
+#: tform1.menu_3_4_1_ru.caption
+msgid "Русский"
+msgstr ""
+
+#: tform1.menu_3_4_lang.caption
+msgid "Язык"
+msgstr ""
+
+#: tform1.menu_4_1_find.caption
+msgid "Найти..."
+msgstr ""
+
+#: tform1.menu_4_2_replace.caption
+msgctxt "tform1.menu_4_2_replace.caption"
+msgid "Заменить..."
+msgstr ""
+
+#: tform1.menu_4_search.caption
+msgid "Поиск"
+msgstr ""
+
+#: tform1.menu_5_1_help.caption
+msgctxt "tform1.menu_5_1_help.caption"
+msgid "Справка"
+msgstr ""
+
+#: tform1.menu_5_2_about.caption
+msgctxt "tform1.menu_5_2_about.caption"
+msgid "О программе"
+msgstr ""
+
+#: tform1.menu_5_help.caption
+msgctxt "tform1.menu_5_help.caption"
+msgid "Справка"
+msgstr ""
+
+#: tform1.menu_lang_3_4_2_en.caption
+msgid "English"
+msgstr ""
+
+#: tform1.savedialog1.title
+msgid "Сохранить как"
+msgstr ""
+
+#: tform2.caption
+msgctxt "tform2.caption"
+msgid "О программе"
+msgstr ""
+
+#: tform2.label1.caption
+msgid ""
+"Text Editor\n"
+"\n"
+"Текстовый редактор\n"
+"\n"
+"Версия: 1.0\n"
+"Создано Cactus Team\n"
+msgstr ""
+
+#: tform3.caption
+msgctxt "tform3.caption"
+msgid "Справка"
+msgstr ""
+
+#: tform3.label1.caption
+msgid "Тут надо что-то написать"
+msgstr ""
+
+#: tform4.cancel.caption
+msgctxt "tform4.cancel.caption"
+msgid "Отмена"
+msgstr ""
+
+#: tform4.caption
+msgctxt "tform4.caption"
+msgid "Заменить"
+msgstr ""
+
+#: tform4.label1.caption
+msgctxt "tform4.label1.caption"
+msgid "Найти текст:"
+msgstr ""
+
+#: tform4.label2.caption
+msgid "Заменить на:"
+msgstr ""
+
+#: tform4.register.caption
+msgctxt "tform4.register.caption"
+msgid "С учетом регистра"
+msgstr ""
+
+#: tform4.replace.caption
+msgctxt "tform4.replace.caption"
+msgid "Заменить"
+msgstr ""
+
+#: tform4.replace_all.caption
+msgctxt "tform4.replace_all.caption"
+msgid "Заменить все"
+msgstr ""
+
+#: tform5.cancel.caption
+msgctxt "tform5.cancel.caption"
+msgid "Отмена"
+msgstr ""
+
+#: tform5.caption
+msgid "Найти"
+msgstr ""
+
+#: tform5.find_next.caption
+msgctxt "tform5.find_next.caption"
+msgid "Найти далее"
+msgstr ""
+
+#: tform5.label1.caption
+msgctxt "tform5.label1.caption"
+msgid "Найти текст:"
+msgstr ""
+
+#: tform5.register.caption
+msgctxt "tform5.register.caption"
+msgid "С учетом регистра"
+msgstr ""
+
