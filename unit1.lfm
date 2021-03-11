@@ -1,21 +1,20 @@
 object Form1: TForm1
-  Left = 361
-  Height = 589
-  Top = 145
-  Width = 1440
+  Left = 1004
+  Height = 550
+  Top = 147
+  Width = 816
   Caption = 'Текстовый редактор'
-  ClientHeight = 569
-  ClientWidth = 1440
-  Color = clHighlight
+  ClientHeight = 530
+  ClientWidth = 816
   Menu = MainMenu1
+  OnCreate = FormCreate
   Position = poDesktopCenter
   LCLVersion = '2.0.10.0'
   object StatusBar1: TStatusBar
     Left = 0
     Height = 23
-    Top = 546
-    Width = 1440
-    Color = clBlack
+    Top = 507
+    Width = 816
     Panels = <    
       item
         Style = psOwnerDraw
@@ -24,24 +23,17 @@ object Form1: TForm1
       item
         Style = psOwnerDraw
         Width = 500
-      end    
-      item
-        Alignment = taCenter
-        Style = psOwnerDraw
-        Width = 50
       end>
-    ParentColor = False
     ParentFont = False
     SimplePanel = False
     OnDrawPanel = StatusBar1DrawPanel
   end
   inline SynEdit1: TSynEdit
     Left = 0
-    Height = 546
+    Height = 507
     Top = 0
-    Width = 1440
+    Width = 816
     Align = alClient
-    Font.Color = clHighlight
     Font.Height = -13
     Font.Name = 'Courier New'
     Font.Pitch = fpFixed
@@ -49,9 +41,12 @@ object Form1: TForm1
     ParentColor = False
     ParentFont = False
     TabOrder = 1
+    OnClick = SynEdit1Click
+    OnKeyDown = SynEdit1KeyDown
+    OnKeyPress = SynEdit1KeyPress
+    OnKeyUp = SynEdit1KeyUp
     Gutter.Width = 57
     Gutter.MouseActions = <>
-    RightGutter.Color = clNone
     RightGutter.Width = 0
     RightGutter.MouseActions = <>
     Keystrokes = <    
@@ -479,9 +474,6 @@ object Form1: TForm1
     MouseTextActions = <>
     MouseSelActions = <>
     VisibleSpecialChars = [vscSpace, vscTabAtLast]
-    RightEdgeColor = clMedGray
-    SelectedColor.Background = clLime
-    SelectedColor.Foreground = cl3DDkShadow
     SelectedColor.BackPriority = 50
     SelectedColor.ForePriority = 50
     SelectedColor.FramePriority = 50
@@ -489,14 +481,11 @@ object Form1: TForm1
     SelectedColor.ItalicPriority = 50
     SelectedColor.UnderlinePriority = 50
     SelectedColor.StrikeOutPriority = 50
-    IncrementColor.Background = clWindow
-    IncrementColor.Foreground = clNone
-    HighlightAllColor.Background = clSkyBlue
     BracketHighlightStyle = sbhsBoth
     BracketMatchColor.Background = clNone
     BracketMatchColor.Foreground = clNone
     BracketMatchColor.Style = [fsBold]
-    FoldedCodeColor.Background = clWindowText
+    FoldedCodeColor.Background = clNone
     FoldedCodeColor.Foreground = clGray
     FoldedCodeColor.FrameColor = clGray
     MouseLinkColor.Background = clNone
@@ -522,14 +511,14 @@ object Form1: TForm1
       object SynGutterChanges1: TSynGutterChanges
         Width = 4
         MouseActions = <>
-        ModifiedColor = clLime
-        SavedColor = clMedGray
+        ModifiedColor = 59900
+        SavedColor = clGreen
       end
       object SynGutterSeparator1: TSynGutterSeparator
         Width = 2
         MouseActions = <>
         MarkupInfo.Background = clWhite
-        MarkupInfo.Foreground = clWhite
+        MarkupInfo.Foreground = clGray
       end
       object SynGutterCodeFolding1: TSynGutterCodeFolding
         MouseActions = <>
@@ -541,7 +530,7 @@ object Form1: TForm1
     end
   end
   object MainMenu1: TMainMenu
-    Left = 784
+    Left = 753
     Top = 8
     object Menu_1_file: TMenuItem
       Caption = 'Файл'
@@ -597,13 +586,12 @@ object Form1: TForm1
       end
       object Menu_3_2_theme: TMenuItem
         Caption = 'Тема оформления'
-        OnClick = Menu_3_2_themeClick
         object MenuItem1: TMenuItem
           Caption = 'Светлая'
           OnClick = MenuItem1Click
         end
         object MenuItem2: TMenuItem
-          Caption = 'Темная'
+          Caption = 'Тёмная'
           OnClick = MenuItem2Click
         end
         object MenuItem3: TMenuItem
@@ -646,11 +634,12 @@ object Form1: TForm1
       Caption = 'Поиск'
       OnClick = Menu_4_searchClick
       object Menu_4_1_find: TMenuItem
-        Caption = 'Найти'
+        Caption = 'Найти...'
         OnClick = Menu_4_1_findClick
       end
       object Menu_4_2_replace: TMenuItem
-        Caption = 'Заменить'
+        Caption = 'Заменить...'
+        OnClick = Menu_4_2_replaceClick
       end
     end
     object Menu_5_help: TMenuItem
@@ -666,39 +655,40 @@ object Form1: TForm1
     end
   end
   object SaveDialog1: TSaveDialog
+    Title = 'Сохранить как'
     DefaultExt = '.txt'
     Filter = 'Text File (*.txt)|*.txt|Все файлы|*.*'
-    Left = 784
-    Top = 56
+    Left = 752
+    Top = 58
   end
   object OpenDialog1: TOpenDialog
     DefaultExt = '.txt'
     Filter = 'Text File (*.txt)|*.txt|Все файлы|*.*'
-    Left = 728
+    Left = 680
     Top = 56
   end
   object Timer1: TTimer
     OnTimer = Timer1Timer
-    Left = 784
+    Left = 752
     Top = 128
   end
   object SynPasSyn1: TSynPasSyn
     Enabled = False
     CompilerMode = pcmDelphi
     NestedComments = False
-    Left = 784
-    Top = 192
+    Left = 753
+    Top = 216
   end
   object SynCppSyn1: TSynCppSyn
     DefaultFilter = 'Файлы C++ (*.c,*.cpp,*.h,*.hpp,*.hh)|*.c;*.cpp;*.h;*.hpp;*.hh'
     Enabled = False
-    Left = 784
-    Top = 264
+    Left = 752
+    Top = 272
   end
   object SynPythonSyn1: TSynPythonSyn
     DefaultFilter = 'Файлы Python (*.py)|*.py'
     Enabled = False
-    Left = 784
+    Left = 752
     Top = 328
   end
   object SynAnySyn1: TSynAnySyn
@@ -710,13 +700,13 @@ object Form1: TForm1
     Entity = False
     DollarVariables = False
     ActiveDot = False
-    Left = 784
-    Top = 400
+    Left = 752
+    Top = 392
   end
   object FontDialog1: TFontDialog
     MinFontSize = 0
     MaxFontSize = 0
-    Left = 872
-    Top = 8
+    Left = 680
+    Top = 136
   end
 end

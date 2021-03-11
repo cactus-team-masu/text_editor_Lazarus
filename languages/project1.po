@@ -10,7 +10,7 @@ msgid "Светлая"
 msgstr ""
 
 #: tform1.menuitem2.caption
-msgid "Темная"
+msgid "Тёмная"
 msgstr ""
 
 #: tform1.menuitem3.caption
@@ -106,11 +106,12 @@ msgid "Язык"
 msgstr ""
 
 #: tform1.menu_4_1_find.caption
-msgid "Найти"
+msgid "Найти..."
 msgstr ""
 
 #: tform1.menu_4_2_replace.caption
-msgid "Заменить"
+msgctxt "tform1.menu_4_2_replace.caption"
+msgid "Заменить..."
 msgstr ""
 
 #: tform1.menu_4_search.caption
@@ -134,5 +135,91 @@ msgstr ""
 
 #: tform1.menu_lang_3_4_2_en.caption
 msgid "English"
+msgstr ""
+
+#: tform1.savedialog1.title
+msgid "Сохранить как"
+msgstr ""
+
+#: tform2.caption
+msgctxt "tform2.caption"
+msgid "О программе"
+msgstr ""
+
+#: tform2.label1.caption
+msgid ""
+"Text Editor\n"
+"\n"
+"Текстовый редактор\n"
+"\n"
+"Версия: 1.0\n"
+"Создано Cactus Team\n"
+msgstr ""
+
+#: tform3.caption
+msgctxt "tform3.caption"
+msgid "Справка"
+msgstr ""
+
+#: tform3.label1.caption
+msgid "Тут надо что-то написать"
+msgstr ""
+
+#: tform4.cancel.caption
+msgctxt "tform4.cancel.caption"
+msgid "Отмена"
+msgstr ""
+
+#: tform4.caption
+msgctxt "tform4.caption"
+msgid "Заменить"
+msgstr ""
+
+#: tform4.label1.caption
+msgctxt "tform4.label1.caption"
+msgid "Найти текст:"
+msgstr ""
+
+#: tform4.label2.caption
+msgid "Заменить на:"
+msgstr ""
+
+#: tform4.register.caption
+msgctxt "tform4.register.caption"
+msgid "С учетом регистра"
+msgstr ""
+
+#: tform4.replace.caption
+msgctxt "tform4.replace.caption"
+msgid "Заменить"
+msgstr ""
+
+#: tform4.replace_all.caption
+msgctxt "tform4.replace_all.caption"
+msgid "Заменить все"
+msgstr ""
+
+#: tform5.cancel.caption
+msgctxt "tform5.cancel.caption"
+msgid "Отмена"
+msgstr ""
+
+#: tform5.caption
+msgid "Найти"
+msgstr ""
+
+#: tform5.find_next.caption
+msgctxt "tform5.find_next.caption"
+msgid "Найти далее"
+msgstr ""
+
+#: tform5.label1.caption
+msgctxt "tform5.label1.caption"
+msgid "Найти текст:"
+msgstr ""
+
+#: tform5.register.caption
+msgctxt "tform5.register.caption"
+msgid "С учетом регистра"
 msgstr ""
 

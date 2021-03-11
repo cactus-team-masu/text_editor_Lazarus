@@ -10,7 +10,7 @@ msgid "Светлая"
 msgstr ""
 
 #: tform1.menuitem2.caption
-msgid "Темная"
+msgid "Тёмная"
 msgstr ""
 
 #: tform1.menuitem3.caption
@@ -106,15 +106,11 @@ msgid "Язык"
 msgstr "Language"
 
 #: tform1.menu_4_1_find.caption
-#, fuzzy
-#| msgid "Найти..."
-msgid "Найти"
+msgid "Найти..."
 msgstr "Find..."
 
 #: tform1.menu_4_2_replace.caption
-#, fuzzy
-#| msgid "Заменить..."
-msgid "Заменить"
+msgid "Заменить..."
 msgstr "Replace..."
 
 #: tform1.menu_4_search.caption
@@ -139,4 +135,90 @@ msgstr "Help"
 #: tform1.menu_lang_3_4_2_en.caption
 msgid "English"
 msgstr ""
+
+#: tform1.savedialog1.title
+msgid "Сохранить как"
+msgstr "Save As"
+
+#: tform2.caption
+msgctxt "tform2.caption"
+msgid "О программе"
+msgstr "About"
+
+#: tform2.label1.caption
+msgid ""
+"Text Editor\n"
+"\n"
+"Текстовый редактор\n"
+"\n"
+"Версия: 1.0\n"
+"Создано Cactus Team\n"
+msgstr "Created by Cactus Team"
+
+#: tform3.caption
+msgctxt "tform3.caption"
+msgid "Справка"
+msgstr "Help"
+
+#: tform3.label1.caption
+msgid "Тут надо что-то написать"
+msgstr "Hello!!!"
+
+#: tform4.cancel.caption
+msgctxt "tform4.cancel.caption"
+msgid "Отмена"
+msgstr "Cancel"
+
+#: tform4.caption
+msgctxt "tform4.caption"
+msgid "Заменить"
+msgstr "Replace"
+
+#: tform4.label1.caption
+msgctxt "tform4.label1.caption"
+msgid "Найти текст:"
+msgstr "Find What:"
+
+#: tform4.label2.caption
+msgid "Заменить на:"
+msgstr "Replace With:"
+
+#: tform4.register.caption
+msgctxt "tform4.register.caption"
+msgid "С учетом регистра"
+msgstr "Match case"
+
+#: tform4.replace.caption
+msgctxt "tform4.replace.caption"
+msgid "Заменить"
+msgstr "Replace"
+
+#: tform4.replace_all.caption
+msgctxt "tform4.replace_all.caption"
+msgid "Заменить все"
+msgstr "Replace All"
+
+#: tform5.cancel.caption
+msgctxt "tform5.cancel.caption"
+msgid "Отмена"
+msgstr "Cancel"
+
+#: tform5.caption
+msgid "Найти"
+msgstr "Find"
+
+#: tform5.find_next.caption
+msgctxt "tform5.find_next.caption"
+msgid "Найти далее"
+msgstr "Find Next"
+
+#: tform5.label1.caption
+msgctxt "tform5.label1.caption"
+msgid "Найти текст:"
+msgstr "Find what:"
+
+#: tform5.register.caption
+msgctxt "tform5.register.caption"
+msgid "С учетом регистра"
+msgstr "Match case"
 
