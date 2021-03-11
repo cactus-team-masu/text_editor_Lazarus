@@ -1,11 +1,11 @@
 object Form1: TForm1
-  Left = 590
-  Height = 687
-  Top = 203
-  Width = 1046
+  Left = 751
+  Height = 688
+  Top = 241
+  Width = 1020
   Caption = 'Текстовый редактор'
-  ClientHeight = 662
-  ClientWidth = 1046
+  ClientHeight = 663
+  ClientWidth = 1020
   DesignTimePPI = 120
   Menu = MainMenu1
   OnCreate = FormCreate
@@ -14,26 +14,26 @@ object Form1: TForm1
   object StatusBar1: TStatusBar
     Left = 0
     Height = 29
-    Top = 633
-    Width = 1046
+    Top = 634
+    Width = 1020
     Panels = <    
       item
+        Style = psOwnerDraw
         Width = 250
       end    
       item
+        Style = psOwnerDraw
         Width = 625
-      end    
-      item
-        Width = 62
       end>
     ParentFont = False
     SimplePanel = False
+    OnDrawPanel = StatusBar1DrawPanel
   end
   inline SynEdit1: TSynEdit
     Left = 0
-    Height = 633
+    Height = 634
     Top = 0
-    Width = 1046
+    Width = 1020
     Align = alClient
     Font.Height = -16
     Font.Name = 'Courier New'
@@ -42,6 +42,10 @@ object Form1: TForm1
     ParentColor = False
     ParentFont = False
     TabOrder = 1
+    OnClick = SynEdit1Click
+    OnKeyDown = SynEdit1KeyDown
+    OnKeyPress = SynEdit1KeyPress
+    OnKeyUp = SynEdit1KeyUp
     Gutter.Width = 72
     Gutter.MouseActions = <>
     RightGutter.Width = 0
@@ -471,6 +475,7 @@ object Form1: TForm1
     MouseTextActions = <>
     MouseSelActions = <>
     VisibleSpecialChars = [vscSpace, vscTabAtLast]
+    ScrollBars = ssAutoBoth
     SelectedColor.BackPriority = 50
     SelectedColor.ForePriority = 50
     SelectedColor.FramePriority = 50
@@ -584,6 +589,18 @@ object Form1: TForm1
       end
       object Menu_3_2_theme: TMenuItem
         Caption = 'Тема оформления'
+        object MenuItem1: TMenuItem
+          Caption = 'Светлая'
+          OnClick = MenuItem1Click
+        end
+        object MenuItem2: TMenuItem
+          Caption = 'Тёмная'
+          OnClick = MenuItem2Click
+        end
+        object MenuItem3: TMenuItem
+          Caption = 'Цветная'
+          OnClick = MenuItem3Click
+        end
       end
       object Menu_3_3_synEdit: TMenuItem
         Caption = 'Синтаксис'
@@ -645,7 +662,7 @@ object Form1: TForm1
     DefaultExt = '.txt'
     Filter = 'Text File (*.txt)|*.txt|Все файлы|*.*'
     left = 940
-    top = 72
+    top = 73
   end
   object OpenDialog1: TOpenDialog
     DefaultExt = '.txt'
@@ -688,5 +705,11 @@ object Form1: TForm1
     ActiveDot = False
     left = 940
     top = 490
+  end
+  object FontDialog1: TFontDialog
+    MinFontSize = 0
+    MaxFontSize = 0
+    left = 850
+    top = 170
   end
 end

@@ -14,6 +14,7 @@ type
   TForm2 = class(TForm)
     Label1: TLabel;
     procedure FormCreate(Sender: TObject);
+    procedure Label1Click(Sender: TObject);
   private
 
   public
@@ -30,6 +31,11 @@ implementation
 { TForm2 }
 
 procedure TForm2.FormCreate(Sender: TObject);
+begin
+
+end;
+
+procedure TForm2.Label1Click(Sender: TObject);
 begin
 
 end;
