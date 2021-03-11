@@ -1,48 +1,51 @@
 object Form1: TForm1
-  Left = 590
-  Height = 687
-  Top = 203
-  Width = 1046
+  Left = 1004
+  Height = 550
+  Top = 147
+  Width = 816
   Caption = 'Текстовый редактор'
-  ClientHeight = 662
-  ClientWidth = 1046
-  DesignTimePPI = 120
+  ClientHeight = 530
+  ClientWidth = 816
   Menu = MainMenu1
   OnCreate = FormCreate
   Position = poDesktopCenter
-  LCLVersion = '2.0.8.0'
+  LCLVersion = '2.0.10.0'
   object StatusBar1: TStatusBar
     Left = 0
-    Height = 29
-    Top = 633
-    Width = 1046
+    Height = 23
+    Top = 507
+    Width = 816
     Panels = <    
       item
-        Width = 250
+        Style = psOwnerDraw
+        Width = 200
       end    
       item
-        Width = 625
-      end    
-      item
-        Width = 62
+        Style = psOwnerDraw
+        Width = 500
       end>
     ParentFont = False
     SimplePanel = False
+    OnDrawPanel = StatusBar1DrawPanel
   end
   inline SynEdit1: TSynEdit
     Left = 0
-    Height = 633
+    Height = 507
     Top = 0
-    Width = 1046
+    Width = 816
     Align = alClient
-    Font.Height = -16
+    Font.Height = -13
     Font.Name = 'Courier New'
     Font.Pitch = fpFixed
     Font.Quality = fqNonAntialiased
     ParentColor = False
     ParentFont = False
     TabOrder = 1
-    Gutter.Width = 72
+    OnClick = SynEdit1Click
+    OnKeyDown = SynEdit1KeyDown
+    OnKeyPress = SynEdit1KeyPress
+    OnKeyUp = SynEdit1KeyUp
+    Gutter.Width = 57
     Gutter.MouseActions = <>
     RightGutter.Width = 0
     RightGutter.MouseActions = <>
@@ -492,11 +495,11 @@ object Form1: TForm1
     OnChange = SynEdit1Change
     inline SynLeftGutterPartList1: TSynGutterPartList
       object SynGutterMarks1: TSynGutterMarks
-        Width = 30
+        Width = 24
         MouseActions = <>
       end
       object SynGutterLineNumber1: TSynGutterLineNumber
-        Width = 21
+        Width = 17
         MouseActions = <>
         MarkupInfo.Background = clBtnFace
         MarkupInfo.Foreground = clNone
@@ -506,19 +509,18 @@ object Form1: TForm1
         LeadingZeros = False
       end
       object SynGutterChanges1: TSynGutterChanges
-        Width = 5
+        Width = 4
         MouseActions = <>
         ModifiedColor = 59900
         SavedColor = clGreen
       end
       object SynGutterSeparator1: TSynGutterSeparator
-        Width = 3
+        Width = 2
         MouseActions = <>
         MarkupInfo.Background = clWhite
         MarkupInfo.Foreground = clGray
       end
       object SynGutterCodeFolding1: TSynGutterCodeFolding
-        Width = 13
         MouseActions = <>
         MarkupInfo.Background = clNone
         MarkupInfo.Foreground = clGray
@@ -528,8 +530,8 @@ object Form1: TForm1
     end
   end
   object MainMenu1: TMainMenu
-    left = 941
-    top = 10
+    Left = 753
+    Top = 8
     object Menu_1_file: TMenuItem
       Caption = 'Файл'
       object Menu_1_1_new: TMenuItem
@@ -584,6 +586,18 @@ object Form1: TForm1
       end
       object Menu_3_2_theme: TMenuItem
         Caption = 'Тема оформления'
+        object MenuItem1: TMenuItem
+          Caption = 'Светлая'
+          OnClick = MenuItem1Click
+        end
+        object MenuItem2: TMenuItem
+          Caption = 'Тёмная'
+          OnClick = MenuItem2Click
+        end
+        object MenuItem3: TMenuItem
+          Caption = 'Цветная'
+          OnClick = MenuItem3Click
+        end
       end
       object Menu_3_3_synEdit: TMenuItem
         Caption = 'Синтаксис'
@@ -644,38 +658,38 @@ object Form1: TForm1
     Title = 'Сохранить как'
     DefaultExt = '.txt'
     Filter = 'Text File (*.txt)|*.txt|Все файлы|*.*'
-    left = 940
-    top = 72
+    Left = 752
+    Top = 58
   end
   object OpenDialog1: TOpenDialog
     DefaultExt = '.txt'
     Filter = 'Text File (*.txt)|*.txt|Все файлы|*.*'
-    left = 850
-    top = 70
+    Left = 680
+    Top = 56
   end
   object Timer1: TTimer
     OnTimer = Timer1Timer
-    left = 940
-    top = 160
+    Left = 752
+    Top = 128
   end
   object SynPasSyn1: TSynPasSyn
     Enabled = False
     CompilerMode = pcmDelphi
     NestedComments = False
-    left = 941
-    top = 270
+    Left = 753
+    Top = 216
   end
   object SynCppSyn1: TSynCppSyn
     DefaultFilter = 'Файлы C++ (*.c,*.cpp,*.h,*.hpp,*.hh)|*.c;*.cpp;*.h;*.hpp;*.hh'
     Enabled = False
-    left = 940
-    top = 340
+    Left = 752
+    Top = 272
   end
   object SynPythonSyn1: TSynPythonSyn
     DefaultFilter = 'Файлы Python (*.py)|*.py'
     Enabled = False
-    left = 940
-    top = 410
+    Left = 752
+    Top = 328
   end
   object SynAnySyn1: TSynAnySyn
     Enabled = False
@@ -686,7 +700,13 @@ object Form1: TForm1
     Entity = False
     DollarVariables = False
     ActiveDot = False
-    left = 940
-    top = 490
+    Left = 752
+    Top = 392
+  end
+  object FontDialog1: TFontDialog
+    MinFontSize = 0
+    MaxFontSize = 0
+    Left = 680
+    Top = 136
   end
 end
