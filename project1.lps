@@ -18,8 +18,16 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Unit1"/>
+<<<<<<< Updated upstream
         <EditorIndex Value="-1"/>
         <UsageCount Value="20"/>
+=======
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="212"/>
+        <CursorPos X="3" Y="211"/>
+        <UsageCount Value="48"/>
+        <Loaded Value="True"/>
+>>>>>>> Stashed changes
       </Unit1>
       <Unit2>
         <Filename Value="unit2.pas"/>
@@ -41,6 +49,43 @@
         <EditorIndex Value="-1"/>
         <UsageCount Value="20"/>
       </Unit3>
+<<<<<<< Updated upstream
+=======
+      <Unit4>
+        <Filename Value="unit4.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form4"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="5"/>
+        <CursorPos X="3" Y="93"/>
+        <UsageCount Value="46"/>
+        <Bookmarks Count="1">
+          <Item0 Y="43" ID="9"/>
+        </Bookmarks>
+        <Loaded Value="True"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="unit5.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form5"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Unit5"/>
+        <EditorIndex Value="6"/>
+        <TopLine Value="33"/>
+        <CursorPos X="51" Y="44"/>
+        <UsageCount Value="30"/>
+        <Loaded Value="True"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="unit1.lfm"/>
+        <EditorIndex Value="1"/>
+        <UsageCount Value="23"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit6>
+>>>>>>> Stashed changes
     </Units>
     <General>
       <ActiveWindowIndexAtStart Value="-1"/>
