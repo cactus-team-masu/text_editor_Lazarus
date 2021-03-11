@@ -1,28 +1,29 @@
 object Form1: TForm1
-  Left = 1004
-  Height = 550
-  Top = 147
-  Width = 816
+  Left = 751
+  Height = 688
+  Top = 241
+  Width = 1020
   Caption = 'Текстовый редактор'
-  ClientHeight = 530
-  ClientWidth = 816
+  ClientHeight = 663
+  ClientWidth = 1020
+  DesignTimePPI = 120
   Menu = MainMenu1
   OnCreate = FormCreate
   Position = poDesktopCenter
-  LCLVersion = '2.0.10.0'
+  LCLVersion = '2.0.8.0'
   object StatusBar1: TStatusBar
     Left = 0
-    Height = 23
-    Top = 507
-    Width = 816
+    Height = 29
+    Top = 634
+    Width = 1020
     Panels = <    
       item
         Style = psOwnerDraw
-        Width = 200
+        Width = 250
       end    
       item
         Style = psOwnerDraw
-        Width = 500
+        Width = 625
       end>
     ParentFont = False
     SimplePanel = False
@@ -30,11 +31,11 @@ object Form1: TForm1
   end
   inline SynEdit1: TSynEdit
     Left = 0
-    Height = 507
+    Height = 634
     Top = 0
-    Width = 816
+    Width = 1020
     Align = alClient
-    Font.Height = -13
+    Font.Height = -16
     Font.Name = 'Courier New'
     Font.Pitch = fpFixed
     Font.Quality = fqNonAntialiased
@@ -45,7 +46,7 @@ object Form1: TForm1
     OnKeyDown = SynEdit1KeyDown
     OnKeyPress = SynEdit1KeyPress
     OnKeyUp = SynEdit1KeyUp
-    Gutter.Width = 57
+    Gutter.Width = 72
     Gutter.MouseActions = <>
     RightGutter.Width = 0
     RightGutter.MouseActions = <>
@@ -474,6 +475,7 @@ object Form1: TForm1
     MouseTextActions = <>
     MouseSelActions = <>
     VisibleSpecialChars = [vscSpace, vscTabAtLast]
+    ScrollBars = ssAutoBoth
     SelectedColor.BackPriority = 50
     SelectedColor.ForePriority = 50
     SelectedColor.FramePriority = 50
@@ -495,11 +497,11 @@ object Form1: TForm1
     OnChange = SynEdit1Change
     inline SynLeftGutterPartList1: TSynGutterPartList
       object SynGutterMarks1: TSynGutterMarks
-        Width = 24
+        Width = 30
         MouseActions = <>
       end
       object SynGutterLineNumber1: TSynGutterLineNumber
-        Width = 17
+        Width = 21
         MouseActions = <>
         MarkupInfo.Background = clBtnFace
         MarkupInfo.Foreground = clNone
@@ -509,18 +511,19 @@ object Form1: TForm1
         LeadingZeros = False
       end
       object SynGutterChanges1: TSynGutterChanges
-        Width = 4
+        Width = 5
         MouseActions = <>
         ModifiedColor = 59900
         SavedColor = clGreen
       end
       object SynGutterSeparator1: TSynGutterSeparator
-        Width = 2
+        Width = 3
         MouseActions = <>
         MarkupInfo.Background = clWhite
         MarkupInfo.Foreground = clGray
       end
       object SynGutterCodeFolding1: TSynGutterCodeFolding
+        Width = 13
         MouseActions = <>
         MarkupInfo.Background = clNone
         MarkupInfo.Foreground = clGray
@@ -530,8 +533,8 @@ object Form1: TForm1
     end
   end
   object MainMenu1: TMainMenu
-    Left = 753
-    Top = 8
+    left = 941
+    top = 10
     object Menu_1_file: TMenuItem
       Caption = 'Файл'
       object Menu_1_1_new: TMenuItem
@@ -658,38 +661,38 @@ object Form1: TForm1
     Title = 'Сохранить как'
     DefaultExt = '.txt'
     Filter = 'Text File (*.txt)|*.txt|Все файлы|*.*'
-    Left = 752
-    Top = 58
+    left = 940
+    top = 73
   end
   object OpenDialog1: TOpenDialog
     DefaultExt = '.txt'
     Filter = 'Text File (*.txt)|*.txt|Все файлы|*.*'
-    Left = 680
-    Top = 56
+    left = 850
+    top = 70
   end
   object Timer1: TTimer
     OnTimer = Timer1Timer
-    Left = 752
-    Top = 128
+    left = 940
+    top = 160
   end
   object SynPasSyn1: TSynPasSyn
     Enabled = False
     CompilerMode = pcmDelphi
     NestedComments = False
-    Left = 753
-    Top = 216
+    left = 941
+    top = 270
   end
   object SynCppSyn1: TSynCppSyn
     DefaultFilter = 'Файлы C++ (*.c,*.cpp,*.h,*.hpp,*.hh)|*.c;*.cpp;*.h;*.hpp;*.hh'
     Enabled = False
-    Left = 752
-    Top = 272
+    left = 940
+    top = 340
   end
   object SynPythonSyn1: TSynPythonSyn
     DefaultFilter = 'Файлы Python (*.py)|*.py'
     Enabled = False
-    Left = 752
-    Top = 328
+    left = 940
+    top = 410
   end
   object SynAnySyn1: TSynAnySyn
     Enabled = False
@@ -700,13 +703,13 @@ object Form1: TForm1
     Entity = False
     DollarVariables = False
     ActiveDot = False
-    Left = 752
-    Top = 392
+    left = 940
+    top = 490
   end
   object FontDialog1: TFontDialog
     MinFontSize = 0
     MaxFontSize = 0
-    Left = 680
-    Top = 136
+    left = 850
+    top = 170
   end
 end
