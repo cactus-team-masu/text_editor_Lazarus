@@ -111,6 +111,7 @@ end;
 
 procedure TForm1.Menu_1_1_newClick(Sender: TObject);
 begin
+ If CurrentFile='' then SaveAs else SynEdit1.Lines.SaveToFile(CurrentFile);
  CurrentFile := '';
  SynEdit1.Clear;
 end;
@@ -119,6 +120,7 @@ procedure TForm1.Menu_1_2_openClick(Sender: TObject);
 begin
  if OpenDialog1.Execute then
   begin
+   If CurrentFile='' then SaveAs else SynEdit1.Lines.SaveToFile(CurrentFile);
    SynEdit1.Lines.LoadFromFile(OpenDialog1.FileName);
    CurrentFile := OpenDialog1.FileName;
   end;
