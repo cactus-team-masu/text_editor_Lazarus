@@ -39,7 +39,7 @@
     </RequiredPackages>
     <Units Count="6">
       <Unit0>
-        <Filename Value="project1.lpr"/>
+        <Filename Value="project1.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit0>
       <Unit1>
@@ -91,6 +91,7 @@
     </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>
+      <OtherUnitFiles Value="C:\Users\Nastya\Documents\GitHub\text_editor_Lazarus\"/>
       <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
     <Linking>

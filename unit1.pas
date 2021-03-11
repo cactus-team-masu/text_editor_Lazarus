@@ -7,14 +7,18 @@ interface
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, Menus, StdCtrls,
   ComCtrls, ExtCtrls, SynEdit, SynHighlighterPas, SynHighlighterCpp,
-  SynHighlighterPython, SynHighlighterAny, LCLTranslator;
+  SynHighlighterPython, SynHighlighterAny,LCLTranslator;
 
 type
 
   { TForm1 }
 
   TForm1 = class(TForm)
+    FontDialog1: TFontDialog;
     MainMenu1: TMainMenu;
+    MenuItem1: TMenuItem;
+    MenuItem2: TMenuItem;
+    MenuItem3: TMenuItem;
     Menu_3_4_1_ru: TMenuItem;
     Menu_lang_3_4_2_en: TMenuItem;
     Menu_3_4_Lang: TMenuItem;
@@ -53,7 +57,10 @@ type
     SynPasSyn1: TSynPasSyn;
     SynPythonSyn1: TSynPythonSyn;
     Timer1: TTimer;
-    procedure FormCreate(Sender: TObject);
+    procedure MenuItem1Click(Sender: TObject);
+    procedure MenuItem2Click(Sender: TObject);
+    procedure MenuItem3Click(Sender: TObject);
+  //  procedure MenuItem4Click(Sender: TObject);
     procedure Menu_1_1_newClick(Sender: TObject);
     procedure Menu_1_2_openClick(Sender: TObject);
     procedure Menu_1_3_closeClick(Sender: TObject);
@@ -65,6 +72,7 @@ type
     procedure Menu_2_3_copyClick(Sender: TObject);
     procedure Menu_2_4_pasteClick(Sender: TObject);
     procedure Menu_3_1_fontClick(Sender: TObject);
+    procedure Menu_3_2_themeClick(Sender: TObject);
     procedure Menu_3_3_1_pasClick(Sender: TObject);
     procedure Menu_3_3_2_cppClick(Sender: TObject);
     procedure Menu_3_3_3_pyClick(Sender: TObject);
@@ -72,11 +80,12 @@ type
     procedure Menu_3_4_1_ruClick(Sender: TObject);
     procedure Menu_3_4_LangClick(Sender: TObject);
     procedure Menu_4_1_findClick(Sender: TObject);
-    procedure Menu_4_2_replaceClick(Sender: TObject);
     procedure Menu_4_searchClick(Sender: TObject);
     procedure Menu_5_1_helpClick(Sender: TObject);
     procedure Menu_5_2_aboutClick(Sender: TObject);
     procedure Menu_lang_3_4_2_enClick(Sender: TObject);
+    procedure StatusBar1DrawPanel(StatusBar: TStatusBar; Panel: TStatusPanel;
+      const Rect: TRect);
     procedure SynEdit1Change(Sender: TObject);
     procedure Timer1Timer(Sender: TObject);
   private
@@ -90,7 +99,7 @@ var
   CurrentFile: String;
 
 implementation
-uses Unit2,Unit3,Unit4, Unit5;
+uses Unit2,Unit3;
 {$R *.lfm}
 
 { TForm1 }
@@ -104,10 +113,46 @@ begin
  end;
 end;
 
-procedure TForm1.FormCreate(Sender: TObject);
+//Светлая
+procedure TForm1.MenuItem1Click(Sender: TObject);
 begin
+ SynEdit1.Color:= clWhite;
+ SynEdit1.RightEdgeColor:=clMedGray;
+ SynEdit1.SelectedColor.Background:=clAqua;
+ SynEdit1.Font.Color:=clBlack;
+ SynEdit1.Gutter.Color:=clWhite;
+ Synedit1.Gutter.Parts[3].MarkupInfo.Background:=clWhite;
+ Synedit1.Gutter.Parts[3].MarkupInfo.Foreground:=clMedGray;
+ Synedit1.Gutter.Parts[1].MarkupInfo.Background:=clWhite;
 
 end;
+//Темная
+procedure TForm1.MenuItem2Click(Sender: TObject);
+begin
+ SynEdit1.Color:= clBlack;
+ SynEdit1.Gutter.Color:=clBlack;
+ SynEdit1.RightEdgeColor:=clMedGray;
+ SynEdit1.Font.Color:=clWhite;
+ SynEdit1.SelectedColor.Background:=clMoneyGreen;
+ Synedit1.Gutter.Parts[3].MarkupInfo.Background:=clBlack;
+ Synedit1.Gutter.Parts[3].MarkupInfo.Foreground:=clMedGray;
+ Synedit1.Gutter.Parts[1].MarkupInfo.Background:=clBlack;
+ //StatusBar1.Panels[0].;
+end;
+
+//Цветная
+procedure TForm1.MenuItem3Click(Sender: TObject);
+begin
+  SynEdit1.Color:= clSkyBlue;
+  SynEdit1.Font.Color:=clBlack;
+  SynEdit1.Gutter.Color:=clHighlight;
+  Synedit1.Gutter.Parts[3].MarkupInfo.Background:=clHighlight;
+  Synedit1.Gutter.Parts[3].MarkupInfo.Foreground:=clBlack;
+  Synedit1.Gutter.Parts[1].MarkupInfo.Background:=clHighlight;
+  SynEdit1.RightEdgeColor:=clHighlight;
+  SynEdit1.SelectedColor.Background:=clWhite;
+end;
+
 
 procedure TForm1.Menu_1_1_newClick(Sender: TObject);
 begin
@@ -168,6 +213,12 @@ end;
 
 procedure TForm1.Menu_3_1_fontClick(Sender: TObject);
 begin
+ if FontDialog1.Execute then
+ SynEdit1.Font:=FontDialog1.Font;
+end;
+
+procedure TForm1.Menu_3_2_themeClick(Sender: TObject);
+begin
 
 end;
 
@@ -203,12 +254,7 @@ end;
 
 procedure TForm1.Menu_4_1_findClick(Sender: TObject);
 begin
-   Unit5.Form5.Show;
-end;
 
-procedure TForm1.Menu_4_2_replaceClick(Sender: TObject);
-begin
-  Unit4.Form4.Show;
 end;
 
 procedure TForm1.Menu_4_searchClick(Sender: TObject);
@@ -231,15 +277,30 @@ begin
  SetDefaultLang('en','languages');
 end;
 
+
+procedure TForm1.StatusBar1DrawPanel(StatusBar: TStatusBar;
+Panel: TStatusPanel; const Rect: TRect);
+begin
+ StatusBar1.Canvas.Brush.Color := SynEdit1.Color;
+ StatusBar1.Canvas.Brush.Style := bsSolid;
+ StatusBar1.Canvas.FillRect(StatusBar.Canvas.ClipRect {Rect});
+ StatusBar1.Canvas.Font.Color := SynEdit1.Font.Color;
+ StatusBar1.Canvas.TextOut(Rect.Left+5, Rect.Top+5, Panel.Text);
+
+end;
+
+
+
 procedure TForm1.SynEdit1Change(Sender: TObject);
 begin
  StatusBar1.Panels[1].Text := 'Номер текущей строки: ' + IntToStr(SynEdit1.CaretY);
+
 end;
 
 procedure TForm1.Timer1Timer(Sender: TObject);
 begin
-  StatusBar1.Panels[0].Text := DateTimeToStr(now)
+  StatusBar1.Panels[0].Text := DateTimeToStr(now);
+  StatusBar1.Panels[2].Text:='Выпуск 1.1';
 end;
-
 end.
 
