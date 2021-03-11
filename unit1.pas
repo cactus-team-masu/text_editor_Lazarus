@@ -60,14 +60,7 @@ type
     procedure MenuItem1Click(Sender: TObject);
     procedure MenuItem2Click(Sender: TObject);
     procedure MenuItem3Click(Sender: TObject);
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-=======
   //  procedure MenuItem4Click(Sender: TObject);
->>>>>>> Stashed changes
-=======
-  //  procedure MenuItem4Click(Sender: TObject);
->>>>>>> Stashed changes
     procedure Menu_1_1_newClick(Sender: TObject);
     procedure Menu_1_2_openClick(Sender: TObject);
     procedure Menu_1_3_closeClick(Sender: TObject);

@@ -1,17 +1,18 @@
 object Form3: TForm3
-  Left = 1037
-  Height = 240
-  Top = 163
-  Width = 320
+  Left = 1035
+  Height = 300
+  Top = 162
+  Width = 400
   Caption = 'Справка'
-  ClientHeight = 240
-  ClientWidth = 320
-  LCLVersion = '2.0.10.0'
+  ClientHeight = 300
+  ClientWidth = 400
+  DesignTimePPI = 120
+  LCLVersion = '2.0.8.0'
   object Label1: TLabel
-    Left = 88
-    Height = 15
-    Top = 80
-    Width = 139
+    Left = 110
+    Height = 20
+    Top = 100
+    Width = 175
     Caption = 'Тут надо что-то написать'
     ParentColor = False
     ParentFont = False

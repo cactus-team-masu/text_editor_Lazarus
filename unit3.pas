@@ -1,4 +1,4 @@
-unit Unit2;
+unit Unit3;
 
 {$mode objfpc}{$H+}
 
@@ -9,11 +9,10 @@ uses
 
 type
 
-  { TForm2 }
+  { TForm3 }
 
-  TForm2 = class(TForm)
+  TForm3 = class(TForm)
     Label1: TLabel;
-    procedure FormCreate(Sender: TObject);
   private
 
   public
@@ -21,19 +20,11 @@ type
   end;
 
 var
-  Form2: TForm2;
+  Form3: TForm3;
 
 implementation
 
 {$R *.lfm}
-
-{ TForm2 }
-
-procedure TForm2.FormCreate(Sender: TObject);
-begin
-
-end;
-
 
 end.
 

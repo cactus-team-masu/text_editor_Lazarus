@@ -140,27 +140,3 @@ msgstr "Help"
 msgid "English"
 msgstr ""
 
-#: tform2.caption
-msgctxt "tform2.caption"
-msgid "О программе"
-msgstr "About"
-
-#: tform2.label1.caption
-msgid ""
-"Text Editor\n"
-"\n"
-"Текстовый редактор\n"
-"\n"
-"Версия: 1.0\n"
-"Создано Cactus Team\n"
-msgstr "Created by Cactus Team"
-
-#: tform3.caption
-msgctxt "tform3.caption"
-msgid "Справка"
-msgstr "Help"
-
-#: tform3.label1.caption
-msgid "Тут надо что-то написать"
-msgstr "Hello!!!"
-
