@@ -14,11 +14,7 @@ type
   { TForm1 }
 
   TForm1 = class(TForm)
-    FontDialog1: TFontDialog;
     MainMenu1: TMainMenu;
-    MenuItem1: TMenuItem;
-    MenuItem2: TMenuItem;
-    MenuItem3: TMenuItem;
     Menu_3_4_1_ru: TMenuItem;
     Menu_lang_3_4_2_en: TMenuItem;
     Menu_3_4_Lang: TMenuItem;
@@ -82,17 +78,7 @@ type
     procedure Menu_5_2_aboutClick(Sender: TObject);
     procedure Menu_lang_3_4_2_enClick(Sender: TObject);
     procedure SynEdit1Change(Sender: TObject);
-    procedure SynEdit1Click(Sender: TObject);
-    procedure SynEdit1KeyDown(Sender: TObject; var Key: Word; Shift: TShiftState
-      );
-    procedure SynEdit1KeyPress(Sender: TObject; var Key: char);
-    procedure SynEdit1KeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure Timer1Timer(Sender: TObject);
-    procedure MenuItem1Click(Sender: TObject);
-    procedure MenuItem2Click(Sender: TObject);
-    procedure MenuItem3Click(Sender: TObject);
-    procedure StatusBar1DrawPanel(StatusBar: TStatusBar; Panel: TStatusPanel;
-          const Rect: TRect);
   private
 
   public
@@ -116,55 +102,6 @@ begin
  Form1.SynEdit1.Lines.SaveToFile(Form1.SaveDialog1.FileName);
  CurrentFile := Form1.SaveDialog1.FileName;
  end;
-end;
-//Светлая
-procedure TForm1.MenuItem1Click(Sender: TObject);
-begin
- SynEdit1.Color:= clWhite;
- SynEdit1.RightEdgeColor:=clMedGray;
- SynEdit1.SelectedColor.Background:=clAqua;
- SynEdit1.Font.Color:=clBlack;
- SynEdit1.Gutter.Color:=clWhite;
- Synedit1.Gutter.Parts[3].MarkupInfo.Background:=clWhite;
- Synedit1.Gutter.Parts[3].MarkupInfo.Foreground:=clMedGray;
- Synedit1.Gutter.Parts[1].MarkupInfo.Background:=clWhite;
-
-end;
-//Темная
-procedure TForm1.MenuItem2Click(Sender: TObject);
-begin
- SynEdit1.Color:= clBlack;
- SynEdit1.Gutter.Color:=clBlack;
- SynEdit1.RightEdgeColor:=clMedGray;
- SynEdit1.Font.Color:=clWhite;
- SynEdit1.SelectedColor.Background:=clMoneyGreen;
- Synedit1.Gutter.Parts[3].MarkupInfo.Background:=clBlack;
- Synedit1.Gutter.Parts[3].MarkupInfo.Foreground:=clMedGray;
- Synedit1.Gutter.Parts[1].MarkupInfo.Background:=clBlack;
- //StatusBar1.Panels[0].;
-end;
-
-//Цветная
-procedure TForm1.MenuItem3Click(Sender: TObject);
-begin
-  SynEdit1.Color:= clSkyBlue;
-  SynEdit1.Font.Color:=clBlack;
-  SynEdit1.Gutter.Color:=clHighlight;
-  Synedit1.Gutter.Parts[3].MarkupInfo.Background:=clHighlight;
-  Synedit1.Gutter.Parts[3].MarkupInfo.Foreground:=clBlack;
-  Synedit1.Gutter.Parts[1].MarkupInfo.Background:=clHighlight;
-  SynEdit1.RightEdgeColor:=clHighlight;
-  SynEdit1.SelectedColor.Background:=clWhite;
-end;
-procedure TForm1.StatusBar1DrawPanel(StatusBar: TStatusBar;
-Panel: TStatusPanel; const Rect: TRect);
-begin
- StatusBar1.Canvas.Brush.Color := SynEdit1.Color;
- StatusBar1.Canvas.Brush.Style := bsSolid;
- StatusBar1.Canvas.FillRect(StatusBar.Canvas.ClipRect {Rect});
- StatusBar1.Canvas.Font.Color := SynEdit1.Font.Color;
- StatusBar1.Canvas.TextOut(Rect.Left+5, Rect.Top+5, Panel.Text);
-
 end;
 
 procedure TForm1.FormCreate(Sender: TObject);
@@ -231,8 +168,7 @@ end;
 
 procedure TForm1.Menu_3_1_fontClick(Sender: TObject);
 begin
- if FontDialog1.Execute then
- SynEdit1.Font:=FontDialog1.Font;
+
 end;
 
 procedure TForm1.Menu_3_3_1_pasClick(Sender: TObject);
@@ -296,28 +232,6 @@ begin
 end;
 
 procedure TForm1.SynEdit1Change(Sender: TObject);
-begin
- StatusBar1.Panels[1].Text := 'Номер текущей строки: ' + IntToStr(SynEdit1.CaretY);
-end;
-
-procedure TForm1.SynEdit1Click(Sender: TObject);
-begin
- StatusBar1.Panels[1].Text := 'Номер текущей строки: ' + IntToStr(SynEdit1.CaretY);
-end;
-
-procedure TForm1.SynEdit1KeyDown(Sender: TObject; var Key: Word;
-  Shift: TShiftState);
-begin
- StatusBar1.Panels[1].Text := 'Номер текущей строки: ' + IntToStr(SynEdit1.CaretY);
-end;
-
-procedure TForm1.SynEdit1KeyPress(Sender: TObject; var Key: char);
-begin
- StatusBar1.Panels[1].Text := 'Номер текущей строки: ' + IntToStr(SynEdit1.CaretY);
-end;
-
-procedure TForm1.SynEdit1KeyUp(Sender: TObject; var Key: Word;
-  Shift: TShiftState);
 begin
  StatusBar1.Panels[1].Text := 'Номер текущей строки: ' + IntToStr(SynEdit1.CaretY);
 end;

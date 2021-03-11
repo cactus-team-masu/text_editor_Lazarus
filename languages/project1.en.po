@@ -5,18 +5,6 @@ msgstr "Content-Type: text/plain; charset=UTF-8"
 msgid "Текстовый редактор"
 msgstr "Text Editor"
 
-#: tform1.menuitem1.caption
-msgid "Светлая"
-msgstr ""
-
-#: tform1.menuitem2.caption
-msgid "Тёмная"
-msgstr ""
-
-#: tform1.menuitem3.caption
-msgid "Цветная"
-msgstr ""
-
 #: tform1.menu_1_1_new.caption
 msgid "Новый"
 msgstr "New"
